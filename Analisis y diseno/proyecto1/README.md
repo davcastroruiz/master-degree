@@ -1,1 +1,0 @@
-This is an example for the first class of Analyze and design
