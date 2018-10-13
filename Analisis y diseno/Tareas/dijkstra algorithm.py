@@ -80,13 +80,17 @@ class Graph:
                     distances[neighbour] = alternative_route
                     previous_vertices[neighbour] = current_vertex
 
+
         path, current_vertex = deque(), dest
-        while previous_vertices[current_vertex] is not None:
-            path.appendleft(current_vertex)
-            current_vertex = previous_vertices[current_vertex]
-        if path:
-            path.appendleft(current_vertex)
-        return path
+        try:
+            while previous_vertices[current_vertex] is not None:
+                path.appendleft(current_vertex)
+                current_vertex = previous_vertices[current_vertex]
+            if path:
+                path.appendleft(current_vertex)
+            return path
+        except:
+            return 'Such source node doesn\'t exist'
 
 
 list_graph = [("a", "b", 7),  ("a", "c", 9),  ("a", "f", 14), ("b", "c", 10),
