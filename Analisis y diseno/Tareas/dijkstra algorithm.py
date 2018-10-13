@@ -1,5 +1,6 @@
 from collections import deque, namedtuple
 
+## code took it from https://dev.to/mxl Maria Boldyreva
 
 # we'll use infinity as a default distance to nodes.
 inf = float('inf')
